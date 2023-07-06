@@ -19,7 +19,28 @@ b. Untuk memperbaiki detail dari citra yang kabur, yang terjadi karena error ata
 adanya efek dari proses akuisisi citra.
 c. Serta untuk mengubah citra 2D menjadi bentuk kurva
 Suatu titik (x,y) dikatakan sebagai tepi (edge) dari suatu citra bila titik 
-tersebutmempunyai perbedaan yang tinggi dengan tetangganya [4]. 
+tersebutmempunyai perbedaan yang tinggi dengan tetangganya [4].
+Teori garis tepi dalam pengolahan citra merujuk pada teknik-teknik yang digunakan untuk menemukan dan meningkatkan tepi objek dalam citra. Tepi adalah perubahan yang tajam dalam intensitas piksel yang memisahkan dua objek atau area yang berbeda dalam citra. Pengenalan tepi merupakan langkah penting dalam banyak aplikasi pengolahan citra, seperti segmentasi objek, deteksi bentuk, pengenalan pola, dan rekonstruksi citra.
+
+Ada beberapa pendekatan yang digunakan untuk menemukan tepi dalam citra, di antaranya:
+
+1. Metode Diferensial: Pendekatan ini menggunakan turunan citra untuk menemukan perubahan intensitas yang tajam. Operator diferensial yang umum digunakan adalah operator Sobel, operator Prewitt, dan operator Roberts. Operator ini menerapkan kernel pada citra untuk menghitung perbedaan intensitas piksel di sekitar setiap titik dalam citra.
+
+2. Metode Berbasis Ambang: Metode ini melibatkan penerapan ambang atau batas tertentu pada perbedaan intensitas antara piksel tetangga. Jika perbedaan intensitas melebihi ambang tersebut, piksel dianggap sebagai tepi. Metode Scharr dan Canny adalah contoh pendekatan berbasis ambang yang umum digunakan.
+
+3. Metode Berbasis Gradien: Pendekatan ini melibatkan penggunaan gradien citra untuk menemukan tepi. Algoritma yang paling terkenal dalam kategori ini adalah operator Canny, yang menggabungkan deteksi tepi dengan pemfilteran non-maksimum dan ambang ganda untuk menghasilkan tepi yang akurat dan tajam.
+
+4. Metode Berbasis Transformasi: Pendekatan ini melibatkan transformasi domain frekuensi, seperti transformasi Fourier atau transformasi wavelet, untuk menemukan tepi dalam domain frekuensi. Dalam domain frekuensi, tepi muncul sebagai perubahan tajam dalam spektrum citra.
+
+Setelah tepi ditemukan, langkah selanjutnya adalah meningkatkan dan memperbaiki tepi tersebut. Teknik yang umum digunakan dalam pemrosesan garis tepi meliputi:
+
+1. Pemfilteran: Penerapan filter untuk mengurangi derau dan meningkatkan kualitas tepi. Filter Gaussian dan filter median adalah contoh filter yang sering digunakan.
+
+2. Penskalaan: Mengubah intensitas tepi untuk meningkatkan kontras dan memperjelas garis tepi. Penskalaan dapat dilakukan dengan menggunakan metode seperti penskalaan linier atau penskalaan histogram.
+
+3. Deteksi Tepi Sekunder: Mendeteksi tepi sekunder atau tepi yang lebih halus menggunakan metode seperti operator Laplacian atau operator LoG (Laplacian of Gaussian).
+
+4. Ekstraksi Fitur: Melakukan ekstraksi fitur dari tepi, seperti panjang, arah, atau bentuk garis tepi. Fitur-fitur ini dapat digunakan untuk analisis dan pengenalan lebih lanjut.Setelah garis tepi diperoleh dan ditingkatkan, mereka dapat digunakan dalam berbagai aplikasi seperti segmentasi citra, pengenalan objek, atau rekonstruksi citra
 # Mengenai Marka Jalan 
 Markah jalan digunakan di permukaan jalan untuk mengarahkan dan memberi informasi kepada pengendara maupun pejalan kaki. Keseragaman bentuk markah merupakan faktor penting untuk meminimalkan kebingungan dan keraguan atas arti markah tersebut. Telah ada upaya antarnegara untuk melakukan standardisasi bentuk markah jalan.
 
